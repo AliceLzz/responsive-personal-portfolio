@@ -56,6 +56,16 @@ a.menu-link:hover {
     color: #02F0E2;
 }
 
+h2.section-title {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 48px;
+}
+
+span.section-title-color {
+    color: #02F0E2;
+}
+
 /*-----------------------------------------------------INFO-----------------------------------------------------*/
 
 .info {
@@ -144,27 +154,38 @@ h3 {
 /*---------------------------------------------------MY WORK----------------------------------------------------*/
 .work-container {
     text-align: center;
-    margin-bottom: 80px;
 }
 
-ul.work {
-    list-style-type: none;
+.work {
+    width: 90vw;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
-.work-item {
-    margin: 10px;
-    width: 30%;
-    display: inline-block;
-}
-
-.work-item img {
+.work-img {
     width: 100%;
-    height: auto;
 }
 
 .work-img:hover {
     transform: scale(1.2);
     transition: transform .5s;
+}
+
+@media (max-width: 769px) {
+    .work {
+        grid-template-columns: 1fr 1fr;
+    }
+    .work-img {
+        width: 100%;
+    }
+}
+@media (max-width: 426px) {
+    .work {
+        grid-template-columns: 1fr;
+    }
 }
 
 /*----------------------------------------------------ABOUT ME--------------------------------------------------*/
@@ -265,24 +286,24 @@ ul.work {
 }
 
 /*----------------------------------------------------CONTACT--------------------------------------------------*/
-section.contact {
-    margin: 0 200px;
-    padding-bottom: 50px;
-    width: 80%;
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 form {
-    float: left;
-    margin: 10px 20px;
     width: 60%;
 }
 
 form input.form,textarea {
     width: 100%;
     height: 40px;
-    margin: 10px 0px;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     padding: 0px 12px;
+    margin-bottom: 1rem;
     background-color: #3F3F3F;
     color: #fff;
 }
@@ -307,7 +328,6 @@ form input.submit {
     text-align: center;
     border: 2px solid;
     border-radius: 5px;
-    margin: 12px auto;
     width: 150px; 
     cursor: pointer; 
 }
@@ -318,12 +338,8 @@ form input.submit {
 }
 
 .social-container{
-    height: 285px;
-    float: left;
-    vertical-align: top;
     background-color: #3F3F3F;
     border-radius: 8px;
-    margin-top: 18px;
 }
 
 .social {
@@ -355,29 +371,57 @@ p.social-text {
     display: inline-block;
 }
 
+@media (max-width:426px){
+    form {
+        width: 90%;
+    }
+    .social-container{
+        width: 90%;
+        height: 285px;
+        background-color: #3F3F3F;
+        border-radius: 8px;
+    }
+    form input.submit {
+        width: 100%; 
+    }
+}
+
+@media (max-width:769px){
+    form {
+        width: 90%;
+    }
+    .social-container{
+        width: 90%;
+        height: 285px;
+        background-color: #3F3F3F;
+        border-radius: 8px;
+    }
+}
 /*----------------------------------------------------FOOTER--------------------------------------------------*/
 footer {
     width: 100%;
     padding: 48px 50px;
-    clear: both;
     background-color: #212121;
-}
+    text-align: center;
 
-.footer-text {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
 }
 
 .footer-ul {
-    list-style-type: none;
-    float: right;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.footer-list {
-    float: left;
-    margin: 0px 10px;
+.footer-ul > li {
+    list-style-type: none;
 }
 
 .footer-img {
-    width: 25px;
+    width: 2rem;
 }
 
