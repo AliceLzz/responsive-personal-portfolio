@@ -18,7 +18,8 @@ body {
     top: 0;
     font-size: 20px;
     padding: 25px 0px;
-    background-color: #000;
+    background-color: #212121;
+    z-index: 1;
 }
 
 .navbar {
@@ -70,29 +71,38 @@ span.section-title-color {
     color: #02F0E2;
 }
 
+
+
 /*-----------------------------------------------------INFO-----------------------------------------------------*/
 
-.info {
-    margin: 0px 120px;
-}
 
 .info-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.7rem;
+    justify-content: center;
+    position: relative;
+    gap: 1rem;
+    padding: 6% 0;
+
 }
 
-.info-1, .info-2 {
+.info-1 {
     display: flex;
     flex-direction: column;
-    vertical-align: middle;
-
+    justify-content: center;
 }
 
+.info-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .info-img { 
-    width: 300px;
-    height: 300px;
+    width: 50%;
     border-radius: 100%;
 }
 
@@ -102,9 +112,7 @@ h1 {
 
 h2.section-title {
     text-align: center;
-    margin-bottom: 24px;
     font-size: 48px;
-    padding-top: 100px;
     clear: both;
 }
 
@@ -115,6 +123,7 @@ span.section-title-color {
 h3 {
     font-size: 28px;
 }
+
 
 .button-primary {
     display:inline-block;
@@ -533,6 +542,16 @@ footer {
         display: none;
         }
 
+    /*---------------------------------------------------INFO----------------------------------------------------*/
+
+    .info-container {
+        padding: 8% 0;
+    }
+
+    .info-1 {
+        align-items: center;
+    }
+
     /*---------------------------------------------------MY WORK----------------------------------------------------*/
 
     .work {
@@ -696,6 +715,17 @@ footer {
         .nav-container input[type="checkbox"]:checked ~ .logo{
         display: none;
         }
+
+    /*---------------------------------------------------INFO----------------------------------------------------*/
+
+        .info-container {
+            padding: 20% 10%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
 
     /*---------------------------------------------------MY WORK----------------------------------------------------*/
 
