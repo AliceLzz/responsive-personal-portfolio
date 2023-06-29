@@ -424,6 +424,7 @@ footer {
         display: block;
         position: fixed;
         background-color: #212121;
+        z-index: 1;
         }
         
         .nav-container {
@@ -609,6 +610,7 @@ footer {
     .navbar {
         width: 100%;
         display: block;
+        z-index: 1;
         }
         
         .nav-container {
